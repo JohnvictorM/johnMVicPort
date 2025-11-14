@@ -404,3 +404,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+/* ==========================================
+   FIX HERO PUSH-DOWN WHEN NAV MENU OPENS
+   ========================================== */
+const heroSection = document.querySelector(".hero");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+
+  // Push hero down when menu opens
+  if (navMenu.classList.contains("active")) {
+    heroSection.classList.add("menu-open");
+  } else {
+    heroSection.classList.remove("menu-open");
+  }
+});
+
+
